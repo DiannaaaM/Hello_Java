@@ -14,29 +14,30 @@ public class Masive2 {
         System.out.println("Сумма трат за месяц составила " + sum + " рублей");
 //        Задача 2
         int[] trati = {500, 1000, 1500, 3000, 50};
-        int mini = 0;
-        int maxi = 0;
-        for (int i = 0; i < trati.length - 1; i++) {
-            if (trati[i] < trati[i + 1]) {
+        int mini = trati[0];
+        int maxi = trati[0];
+
+        for (int i = 1; i < trati.length; i++) {
+            if (trati[i] < mini) {
                 mini = trati[i];
-            } else {
-                mini = trati[i + 1];
             }
-            if (trati[i] > trati[i + 1]) {
+            if (trati[i] > maxi) {
                 maxi = trati[i];
-            } else {
-                maxi = trati[i + 1];
             }
         }
+
         System.out.println("Минимальная сумма трат за неделю составила " + mini + " рублей. Максимальная сумма трат за неделю составила " + maxi + " рублей");
-//        Задача 3
+//          Задача 3
         int[] cash = {1700, 2320, 500, 880, 3000};
         int all = 0;
+
         for (int i = 0; i < cash.length; i++) {
             all += cash[i];
         }
-        all =  all / 5;
-        System.out.println("Средняя сумма трат за месяц составила " + all + " рублей");
+
+        double average = (double) all / cash.length;
+        System.out.println("Средняя сумма трат за месяц составила " + average + " рублей");
+
 //        Задача 4
         char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
         int left = 0;
