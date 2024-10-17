@@ -48,8 +48,14 @@ public class Book {
         return Objects.hash(name, author, year);
     }
 
-    public String getBookInfo() {
-        return author.toString();
+    @Override
+    public String toString() {
+        return "Book{" +
+                "name='" + name + '\'' +
+                ", author=" + author +
+                ", year=" + year +
+                '}';
     }
 }
+
 
